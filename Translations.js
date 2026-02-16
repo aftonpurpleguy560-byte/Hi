@@ -1,6 +1,6 @@
 /**
  * Purpleguy © 2026 - tablet power
- * Dil çevirileri objesi
+ * Dil Dosyası
  */
 const translations = {
     tr: {
@@ -8,6 +8,7 @@ const translations = {
         subtitle: "GAMER & DEVELOPER",
         bio: "YouTube kanalımda popüler oyunların videolarını, rehberlerini ve en komik anlarını paylaşıyorum. Aynı zamanda yazılım dünyasında kendimi geliştiriyorum.",
         btnYt: "Kanalıma Git",
+        btnInsta: "Instagram Hesabıma Git", // Türkçe metin
         btnLang: "English"
     },
     en: {
@@ -15,7 +16,7 @@ const translations = {
         subtitle: "GAMER & DEVELOPER",
         bio: "On my YouTube channel, I share gameplay videos, guides, and the funniest moments of popular games. I'm also developing myself in the world of software.",
         btnYt: "Visit My Channel",
+        btnInsta: "Go to My Instagram", // İngilizce metin
         btnLang: "Türkçe"
     }
 };
-
