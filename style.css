@@ -1,0 +1,14 @@
+/* Arka planı siyah yap ve metni beyaz yap ki okunsun */
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    /* Metni ekrana tam ortalamak için flexbox kullanıyoruz */
+    display: flex;
+    justify-content: center; /* Yatayda ortalar */
+    align-items: center;    /* Dikeyde ortalar */
+    height: 100vh;          /* Sayfa yüksekliğini ekran kadar yapar */
+    font-family: sans-serif; /* Daha modern bir yazı tipi */
+}
+
