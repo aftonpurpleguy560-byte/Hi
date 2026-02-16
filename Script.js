@@ -1,6 +1,6 @@
 /**
  * Purpleguy © 2026 - tablet power
- * Bu dosya dil değiştirme mantığını ve buton etkileşimlerini yönetir.
+ * Bu script dil değiştirme mantığını ve buton etkileşimlerini yönetir.
  */
 
 let currentLang = 'tr';
