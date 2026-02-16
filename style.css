@@ -1,76 +1,113 @@
-/* Genel Sayfa Ayarları */
-body {
-    background-color: #000000; /* Tam siyah arka plan */
-    color: #ffffff;           /* Beyaz yazı rengi */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Temizleme */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Ana Ekran */
+.hero {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    text-align: center;
+    padding: 20px;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
 }
 
-/* İçerik Kutusu */
-.container {
-    max-width: 500px;
-    padding: 40px;
-    background-color: #111111; /* Kutu rengi hafif gri-siyah */
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(125, 42, 232, 0.2); /* Hafif mor parlama */
-    border: 1px solid #333;
+/* Profil Resmi Alanı */
+.image-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 25px;
 }
 
-/* Profil Resmi */
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #a259ff; /* Mor çerçeve */
-    margin-bottom: 20px;
-    object-fit: cover;
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px; /* Modern karemsi yuvarlak */
+    border: 2px solid #a259ff;
+    background: #111;
+    padding: 5px;
 }
 
-/* Başlık */
+/* Yazı Stilleri */
 h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.highlight {
     color: #a259ff;
-    font-size: 2rem;
-    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(162, 89, 255, 0.5);
 }
 
-/* Yazı Alanı */
-.content p {
-    line-height: 1.8;
-    font-size: 1.1rem;
-    color: #cccccc;
-}
-
-/* Yetenekler Bölümü */
-.skills {
-    margin-top: 25px;
-    text-align: left;
-    display: inline-block;
-}
-
-.skills h3 {
-    color: #a259ff;
+.subtitle {
     font-size: 1.2rem;
+    color: #888;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* Uzun Yazı Alanı */
+.bio {
+    max-width: 600px;
     text-align: center;
+    line-height: 1.8;
+    color: #cccccc;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
 }
 
-.skills ul {
-    list-style: "🚀 ";
-    padding-left: 20px;
+/* Butonlar */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
 }
 
-.skills li {
-    margin-bottom: 8px;
-    color: #eee;
+.btn-primary, .btn-secondary {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-/* Alt Bilgi */
-.footer {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #666;
+.btn-primary {
+    background: #a259ff;
+    color: white;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 20px rgba(162, 89, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #333;
+    color: #ccc;
+}
+
+.btn-secondary:hover {
+    background: #222;
+    color: white;
+}
+
+/* İmza */
+.signature {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.8rem;
+    color: #444;
 }
