@@ -1,14 +1,76 @@
-/* Arka planı siyah yap ve metni beyaz yap ki okunsun */
+/* Genel Sayfa Ayarları */
 body {
-    background-color: black;
-    color: white;
+    background-color: #000000; /* Tam siyah arka plan */
+    color: #ffffff;           /* Beyaz yazı rengi */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 0;
-    /* Metni ekrana tam ortalamak için flexbox kullanıyoruz */
     display: flex;
-    justify-content: center; /* Yatayda ortalar */
-    align-items: center;    /* Dikeyde ortalar */
-    height: 100vh;          /* Sayfa yüksekliğini ekran kadar yapar */
-    font-family: sans-serif; /* Daha modern bir yazı tipi */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
 }
 
+/* İçerik Kutusu */
+.container {
+    max-width: 500px;
+    padding: 40px;
+    background-color: #111111; /* Kutu rengi hafif gri-siyah */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(125, 42, 232, 0.2); /* Hafif mor parlama */
+    border: 1px solid #333;
+}
+
+/* Profil Resmi */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #a259ff; /* Mor çerçeve */
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* Başlık */
+h1 {
+    color: #a259ff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Yazı Alanı */
+.content p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+/* Yetenekler Bölümü */
+.skills {
+    margin-top: 25px;
+    text-align: left;
+    display: inline-block;
+}
+
+.skills h3 {
+    color: #a259ff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.skills ul {
+    list-style: "🚀 ";
+    padding-left: 20px;
+}
+
+.skills li {
+    margin-bottom: 8px;
+    color: #eee;
+}
+
+/* Alt Bilgi */
+.footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
