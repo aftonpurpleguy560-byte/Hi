@@ -9,7 +9,7 @@ const translations = {
         bio: "YouTube kanalımda popüler oyunların videolarını, rehberlerini ve en komik anlarını paylaşıyorum. Aynı zamanda yazılım dünyasında kendimi geliştiriyorum.",
         btnYt: "Kanalıma Git",
         btnInsta: "Instagram Hesabıma Git", // Türkçe metin
-        btnLang: "English"
+        btnLang: "İngilizce"
     },
     en: {
         title: "Hi, I'm <span class='highlight'>Efe</span>",
@@ -17,6 +17,6 @@ const translations = {
         bio: "On my YouTube channel, I share gameplay videos, guides, and the funniest moments of popular games. I'm also developing myself in the world of software.",
         btnYt: "Visit My Channel",
         btnInsta: "Go to My Instagram", // İngilizce metin
-        btnLang: "Türkçe"
+        btnLang: "Turkish"
     }
 };
