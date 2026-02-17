@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Efe Mert | Gamer & Developer</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#000000">
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +18,7 @@
     <div class="card">
         <div class="profile-section">
             <div class="image-wrapper">
-                <img src="" alt="Efe Mert" class="avatar" id="user-avatar">
+                <img src="profil.jpg" alt="Efe Mert" class="avatar" id="user-avatar">
             </div>
             
             <h1 id="title">Merhaba, Ben <span class="highlight">Efe</span></h1>
@@ -26,13 +32,19 @@
         <div class="cta-buttons">
             <a href="https://www.youtube.com/@efemert2181" target="_blank" class="btn-primary" id="btn-yt">Youtube Kanalıma Git</a>
             <a href="https://www.instagram.com/efe_01107/" target="_blank" class="btn-instagram" id="btn-insta">Instagram Hesabıma Git</a>
-            <button id="lang-btn" class="btn-secondary">İngilizce</button>
+            <button id="lang-btn" class="btn-secondary">ingilizce</button>
         </div>
 
         <footer class="signature">
             Purpleguy © 2026 - tablet power
         </footer>
     </div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      }
+    </script>
 
     <script src="Translations.js"></script>
     <script src="Script.js"></script>
