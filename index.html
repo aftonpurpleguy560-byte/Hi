@@ -7,7 +7,7 @@
     
     <link rel="manifest" href="manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#000000">
 
     <link rel="stylesheet" href="style.css">
@@ -18,7 +18,7 @@
     <div class="card">
         <div class="profile-section">
             <div class="image-wrapper">
-                <img src="profil.jpg" alt="Efe Mert" class="avatar" id="user-avatar">
+                <img src="profil.jpg" alt="Efe Mert" class="avatar" id="user-avatar" onerror="this.src='https://github.com/efemert2181.png'">
             </div>
             
             <h1 id="title">Merhaba, Ben <span class="highlight">Efe</span></h1>
@@ -32,7 +32,8 @@
         <div class="cta-buttons">
             <a href="https://www.youtube.com/@efemert2181" target="_blank" class="btn-primary" id="btn-yt">Youtube Kanalıma Git</a>
             <a href="https://www.instagram.com/efe_01107/" target="_blank" class="btn-instagram" id="btn-insta">Instagram Hesabıma Git</a>
-            <button id="lang-btn" class="btn-secondary">ingilizce</button>
+            
+            <button id="lang-btn" class="btn-secondary">İngilizce</button>
         </div>
 
         <footer class="signature">
@@ -42,7 +43,9 @@
 
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js');
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js');
+        });
       }
     </script>
 
