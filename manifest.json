@@ -1,0 +1,21 @@
+{
+  "short_name": "Efe Mert",
+  "name": "Efe Mert | Gamer & Developer",
+  "icons": [
+    {
+      "src": "profil.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "profil.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}
+
