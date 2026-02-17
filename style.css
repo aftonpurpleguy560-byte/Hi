@@ -1,12 +1,16 @@
 /* Purpleguy © 2026 - tablet power */
+
+/* Temel Sıfırlama */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* Mobil tıklama gölgesini siler */
 }
 
-body {
-    background-color: #000000; /* Dış taraf tam siyah */
+/* Ana Sayfa Yapısı */
+html, body {
+    background-color: #000000;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -14,47 +18,78 @@ body {
     align-items: center;
     height: 100vh;
     width: 100vw;
-    overflow: hidden; /* KAYDIRMA KAPALI */
+    /* PWA ve Tabletlerde kaydırmayı tamamen kilitler */
+    overflow: hidden; 
+    position: fixed;
 }
 
-/* Koyu Gri Kart (Çerçeve) */
+/* Koyu Gri Çerçeve (Ana Kart) */
 .card {
-    background-color: #111111; /* Çerçeve içi koyu gri */
+    background-color: #111111; /* Koyu gri çerçeve içi */
     padding: 40px 30px;
     border-radius: 25px;
     border: 1px solid #222;
     text-align: center;
-    max-width: 480px;
+    max-width: 450px;
     width: 90%;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease;
 }
 
+/* Profil Resmi */
 .avatar {
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    border: 3px solid #ff0000; /* Kırmızı neon halka */
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-    margin-bottom: 20px;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
     object-fit: cover;
+    margin-bottom: 20px;
 }
 
-h1 { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom: 5px; }
-.highlight { color: #ff0000; text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
-.subtitle { font-size: 0.8rem; color: #777; letter-spacing: 4px; margin-bottom: 25px; }
-.bio { color: #bbb; font-size: 0.95rem; margin-bottom: 30px; line-height: 1.5; }
+/* Yazı Tipleri */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
 
-.cta-buttons { display: flex; flex-direction: column; gap: 12px; }
+.highlight {
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: #666;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.bio {
+    line-height: 1.6;
+    color: #cccccc;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* Buton Düzeni */
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
 .btn-primary, .btn-instagram, .btn-secondary {
     text-decoration: none;
     padding: 14px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
     font-size: 0.9rem;
     border: none;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-align: center;
 }
 
@@ -62,5 +97,41 @@ h1 { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom: 5px; }
 .btn-instagram { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: white; }
 .btn-secondary { background: #1a1a1a; color: #888; border: 1px solid #333; }
 
-.signature { margin-top: 35px; font-size: 0.7rem; color: #333; }
+/* Hover Efektleri */
+.btn-primary:hover, .btn-instagram:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
 
+/* İmza */
+.signature {
+    margin-top: 35px;
+    font-size: 0.75rem;
+    color: #333;
+}
+
+/* TABLET UYUMLULUĞU (iPad ve büyük ekranlar için) */
+@media (min-width: 768px) {
+    .card {
+        max-width: 550px; /* Tablette kutu biraz daha büyür */
+        padding: 60px 50px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .avatar {
+        width: 160px;
+        height: 160px;
+    }
+
+    .bio {
+        font-size: 1.1rem;
+    }
+
+    .btn-primary, .btn-instagram, .btn-secondary {
+        font-size: 1rem;
+        padding: 16px;
+    }
+}
